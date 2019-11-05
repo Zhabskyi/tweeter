@@ -43,4 +43,46 @@
   margin: 0 0.5em;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  max-height: 120px;
+  width: 100vw;
+  z-index: 100;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-size: 1.75em;
+  font-family: "Bungee", cursive, sans-serif;
+}
+.nav__new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70px;
+}
+.nav__new-tweet span {
+  font-weight: 300;
+}
+.nav__new-tweet__arrow {
+  color: #da9a34;
+}
+
+.main-header {
+  z-index: 100;
+  top: 120px;
+  position: fixed;
+  max-height: 400px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e89b00;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
 /*# sourceMappingURL=core.css.map */
