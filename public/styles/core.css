@@ -18,7 +18,7 @@
   text-align: center;
   margin: 0 1em;
 }
-.tweet__header__email {
+.tweet__header_email {
   font-size: 1em;
   height: 70px;
   line-height: 70px;
@@ -31,5 +31,16 @@
   background-color: inherit;
   border-bottom: 3px solid #383838;
 }
+.tweet__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+.tweet__footer_icons {
+  color: #4056A1;
+}
+.tweet__footer_icons i {
+  margin: 0 0.5em;
+}
 
-/*# sourceMappingURL=tweet.css.map */
+/*# sourceMappingURL=core.css.map */

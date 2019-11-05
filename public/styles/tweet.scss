@@ -1,13 +1,45 @@
 .tweet {
+  & article {
+    margin: 1em;
+    padding: 1em;
+    border: 3px solid $color-primary-dark;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
+    height: 70px;
     &__author{
       display: flex;
       &-name{
         font-size: 1em;
+        height: 70px;
+        line-height: 70px;
         text-align: center;
         margin: 0 1em;
+      }
+    }
+    &_email {
+      font-size: 1em;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      margin: 0 1em;
+    }
+  }
+  &__text {
+    width: 100%;
+    padding: 1.5em;
+    background-color: inherit;
+    border-bottom: 3px solid $color-primary-dark;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    &_icons {
+      color: $color-primary;
+      & i {
+        margin: 0 0.5em;
       }
     }
   }
