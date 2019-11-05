@@ -1,0 +1,14 @@
+.tweet {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    &__author{
+      display: flex;
+      &-name{
+        font-size: 1em;
+        text-align: center;
+        margin: 0 1em;
+      }
+    }
+  }
+}

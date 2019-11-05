@@ -6,9 +6,18 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+    <!-- Font Awesome Link-->
+    <script src="https://kit.fontawesome.com/433075aa8d.js" crossorigin="anonymous"></script>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -19,11 +28,63 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="nav">
+      <span class="nav-logo">tweeter</span>
+      <div class="nav-new-tweet">
+        <div>
+          Write <span>a new tweet</span>
+        </div>
+        <div class="nav-arrow">
+            <i class="fas fa-angle-double-down"></i>
+        </div>
+      </div>
     </nav>
 
+    <header class="main-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Oleksandr Zhabskyi</h2>
+        </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+        <section>
+          <form action="/tweets/" method="POST" class="new-tweet-form">
+            <textarea class="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
+            <div class="new-tweet-controls">
+                <input type="submit" value="Tweet" class="new-tweet-btn">
+                <span class="counter">140</span>
+            </div>
+          </form>
+        </section>
+        <!-- Tweet container starts here-->
+        <section class="tweet">
+          <article>
+            <header class="tweet__header">
+              <div class="tweet__header__author">
+                <div>
+                    <img src="https://i.imgur.com/73hZDYK.png"> 
+                </div>
+                <h5 class="tweet__header__author-name">Newton</h5>
+              </div>
+              <div class="email">
+                @Sirlsaac
+              </div>
+            </header>
+            <textarea class="tweet" name="text" placeholder="What are you humming about?">If I have seen further it is by standing on the shoulders og giants</textarea>
+            <footer>
+              <div>
+                <div><span>10</span> days ago</div>
+              </div>
+            </footer>
+          </article>
+        </section>
+    </main>
   </body>
+
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>
