@@ -1,8 +1,20 @@
 .tweet {
+  font-weight: 300;
+  margin: 1em;
+  padding: 1em;
+  border: 3px solid $color-primary-dark;
+  &:hover {
+    font-weight: 400;
+    box-shadow: 10px 10px 10px 0px $color-primary-opasity;
+  }
+  &:hover .tweet__header_email {
+    visibility: visible;
+  }
+  &:hover .tweet__footer_icons {
+    font-size: 0.9em;
+  }
   & article {
-    margin: 1em;
-    padding: 1em;
-    border: 3px solid $color-primary-dark;
+
   }
   &__header {
     display: flex;
@@ -19,6 +31,8 @@
       }
     }
     &_email {
+      visibility: hidden;
+      color: $color-primary-light;
       font-size: 1em;
       height: 70px;
       line-height: 70px;
@@ -37,6 +51,7 @@
     justify-content: space-between;
     padding: 0 1em;
     &_icons {
+      font-size:0.8em;
       color: $color-primary;
       & i {
         margin: 0 0.5em;
