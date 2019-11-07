@@ -10,33 +10,6 @@ This SPA build on HTML, SASS, JS, jQuery, AJAX, Node, Express and MongoDB stack.
 2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 3. Go to <http://localhost:8080/> in your browser.
 
-Display Requirements
-Navigation Bar:
-
-is fixed to the top
-has padding on both sides
-contains Compose button
-Compose Tweet box:
-
-is displayed above the list of tweets
-is hidden on page load
-contains a form for submitting tweets, which itself contains:
-a textarea for new tweet content
-a left-aligned button for submitting new tweets
-contains a Character Counter, right-aligned, which by default shows 140
-List of Tweets:
-
-displays tweets in reverse-chronological order (that is, by creation time descending)
-Individual Tweets:
-
-have a header, which contains the user's:
-avatar, on the left
-name, on the left and after the avatar
-handle, on the right
-have a body, which contains the tweet text
-have a footer, which displays:
-how long ago the tweet was created, on the left
-"Flag", "Re-tweet" and "Like" icons upon hovering over the tweet, on the right
 ## Behaviour
  * Navigation Bar
    - Compose button in the Navigation Bar toggle textarea for new tweet which is auto-focused.
