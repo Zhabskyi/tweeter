@@ -11,7 +11,7 @@
     visibility: visible;
   }
   &:hover .tweet__footer_icons {
-    font-size: 0.9em;
+    visibility: visible;
   }
 
   &__header {
@@ -50,6 +50,7 @@
     justify-content: space-between;
     padding: 0 1em;
     &_icons {
+      visibility: hidden;
       font-size:0.8em;
       color: $color-primary;
       & i {

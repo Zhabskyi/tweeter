@@ -64,7 +64,7 @@ body {
   visibility: visible;
 }
 .tweet:hover .tweet__footer_icons {
-  font-size: 0.9em;
+  visibility: visible;
 }
 .tweet__header {
   display: flex;
@@ -103,6 +103,7 @@ body {
   padding: 0 1em;
 }
 .tweet__footer_icons {
+  visibility: hidden;
   font-size: 0.8em;
   color: #4056A1;
 }
