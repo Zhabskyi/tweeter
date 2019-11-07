@@ -1,8 +1,9 @@
+//Styles for error message
 const styles = {
   height: "50px",
   visibility: "visible",
   opacity: "1"
-}
+};
 
 const renderTweets = function(tweets) {
   tweets.map(el => renderTweet(el));
@@ -51,4 +52,39 @@ const focusEnter = function() {
   return $("#tweet-input")
     .val("")
     .focus();
+};
+
+const scrollButtonHandler = function(scroll) {
+  if (scroll >= 500) {
+    $("#scrollButton").addClass("scrollButton");
+    $("#scrollButton").click(() => {
+      $(window).scrollTop(0);
+    });
+  } else {
+    $("#scrollButton").removeClass("scrollButton");
+  }
+};
+
+const onTweetSubmit = function(event) {
+  event.preventDefault();
+  $(".new-tweet__error").attr("style", "");
+  const inputLength = $("#tweet-input").val().length;
+  const validator = checkTweetValidity(inputLength, 140);
+  if (validator.isValid) {
+    const data = $(this).serialize();
+    const url = "/tweets/";
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      success: data => {
+        renderTweet(data);
+      }
+    });
+    focusEnter();
+  } else {
+    $(".new-tweet__error")
+      .css(styles)
+      .text(validator.message);
+  }
 };

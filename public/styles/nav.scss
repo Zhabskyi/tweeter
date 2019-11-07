@@ -38,13 +38,10 @@
   & i {
     @include absoluteCenter;
   }
-  @include lg {
-    width: 260px;
-  }
   cursor: pointer;
   width: 80px;
   height: 80px;
-  top: 85%;
+  top: 90%;
   left: 90%;
   position: sticky;
   text-align: center;

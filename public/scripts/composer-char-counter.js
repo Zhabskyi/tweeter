@@ -10,7 +10,7 @@ const counter = function() {
     .siblings(".new-tweet__form__controls")
     .children(".new-tweet__form__controls_counter");
 
-    $counter.text(function() {
+  $counter.text(function() {
     return 140 - $length;
   });
 
@@ -21,13 +21,11 @@ const counter = function() {
   }
 };
 
-const textareaAutoHeight = function () {
+// This function for increase height of textarea when we have multiple lines
+const textareaAutoHeight = function() {
   var el = this;
   setTimeout(function() {
-    el.style.cssText = 'height: 2em;';
-    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    el.style.cssText = "height: 2em;";
+    el.style.cssText = "height:" + el.scrollHeight + "px";
   }, 0);
-}
-
-
-
+};

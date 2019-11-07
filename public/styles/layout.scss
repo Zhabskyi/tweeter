@@ -33,11 +33,12 @@ body {
 
 .container {
   @include lg {
-    width: 60%;
+   // width: 60%;
     padding-top: 48px;
   }
   padding-top: 80px;
-  width: 90%;
+  flex: 5 1;
+  //width: 90%;
   margin: 2em auto;
   background-color: inherit;
 }

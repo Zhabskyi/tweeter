@@ -1,3 +1,5 @@
+
+// To create Tweet Element used JQuary instead HTML template
 const createTweetElement = function(tweet) {
   const createdDaysAgo = dateHandeler(tweet.created_at);
 
