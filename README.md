@@ -25,7 +25,7 @@ This SPA build on HTML, SASS, JS, jQuery, AJAX, Node, Express and MongoDB stack.
 
 ## Screenshots
 
-!["Screenshot of Main page"](https://github.com/Zhabskyi/tweeter/blob/master/docs/1.png?raw=true)
+!["Screenshot of Main page"]()
 !["Screenshot of URLs page"](https://github.com/Zhabskyi/tinyapp/blob/master/docs/2.png?raw=true)
 !["Screenshot of Create/Edit new url page"](https://github.com/Zhabskyi/tinyapp/blob/master/docs/3.png?raw=true)
 
