@@ -26,8 +26,17 @@ This SPA build on HTML, SASS, JS, jQuery, AJAX, Node, Express and MongoDB stack.
 ## Screenshots
 
 !["Screenshot of Main page"](https://github.com/Zhabskyi/tweeter/blob/master/docs/1.png?raw=true)
+
+##
+
 !["Screenshot of Tweets layout"](https://github.com/Zhabskyi/tweeter/blob/master/docs/2.png?raw=true)
+
+##
+
 !["Screenshot of Desktop layout"](https://github.com/Zhabskyi/tweeter/blob/master/docs/3.png?raw=true)
+
+##
+
 !["Screenshot of Desktop layout with error message"](https://github.com/Zhabskyi/tweeter/blob/master/docs/4.png?raw=true)
 
 ## Dependencies
