@@ -16,10 +16,6 @@
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-  
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -30,60 +26,72 @@
       <div>
         Write <span>a new tweet</span>
       </div>
-      <div class="nav__new-tweet__arrow">
+      <div class="nav__new-tweet__arrow bounceAlpha">
         <i class="fas fa-angle-double-down"></i>
       </div>
     </div>
   </nav>
-
-  <header class="main-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Oleksandr Zhabskyi</h2>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form action="/tweets/" method="POST" class="new-tweet__form">
-        <textarea class="new-tweet__form__textarea" name="text" placeholder="What are you humming about?"></textarea>
-        <div class="new-tweet__form__controls">
-          <input type="submit" value="Tweet" class="new-tweet__form__controls_btn">
-          <span class="new-tweet__form__controls_counter">140</span>
-        </div>
-      </form>
-    </section>
-    <!-- Tweet container starts here-->
-    <section id="tweet-container">
-      <article class="tweet">
-        <header class="tweet__header">
-          <div class="tweet__header__author">
-            <img src="https://i.imgur.com/73hZDYK.png">
-            <h5 class="tweet__header__author-name">Newton</h5>
+  
+  <div class="content-wrapper">
+      <header class="main-header">
+          <div>
+            <img src="/images/ava.png">
           </div>
-          <div class="tweet__header_email">
-            @Sirlsaac
+          <br>
+          <div>
+            <h2>Oleksandr Zhabskyi</h2>
           </div>
         </header>
-        <p class="tweet__text" id="tweet-text"> If I have seen further it is by standing on the shoulders og giants
-        </p>
-        <footer class="tweet__footer">
-          <div>
-            <span id="tweet-time">10</span> days ago
-          </div>
-          <div class="tweet__footer_icons">
-            <i class="fab fa-font-awesome-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    </section>
-  </main>
+        <div id="scrollButton">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+      
+        <!-- Page-specific (main) content here -->
+        <main class="container">
+          <section id="new-tweet-section" class="new-tweet hide">
+            <div style="height: 0px" class="new-tweet__error"></div>
+            <form id="form" action="/tweets/" method="POST" class="new-tweet__form">
+              <textarea id="tweet-input" class="new-tweet__form__textarea" name="text" placeholder="What are you humming about?"></textarea>
+              <div class="new-tweet__form__controls">
+                <input id="submit" type="submit" value="Tweet" class="new-tweet__form__controls_btn">
+                <span class="new-tweet__form__controls_counter">140</span>
+              </div>
+            </form>
+          </section>
+          <!-- Tweet container starts here-->
+          <section id="tweet-container">
+            <article class="tweet">
+              <header class="tweet__header">
+                <div class="tweet__header__author">
+                  <img src="https://i.imgur.com/73hZDYK.png">
+                  <h5 class="tweet__header__author-name">Newton</h5>
+                </div>
+                <div class="tweet__header_email">
+                  @Sirlsaac
+                </div>
+              </header>
+              <p class="tweet__text" id="tweet-text"> If I have seen further it is by standing on the shoulders og giants
+              </p>
+              <footer class="tweet__footer">
+                <div>
+                  <span id="tweet-time">10</span> days ago
+                </div>
+                <div class="tweet__footer_icons">
+                  <i class="fab fa-font-awesome-flag"></i>
+                  <i class="fas fa-retweet"></i>
+                  <i class="fas fa-heart"></i>
+                </div>
+              </footer>
+            </article>
+          </section>
+        </main>
+  </div>
+  
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/components.js"></script>
+  <script type="text/javascript" src="/scripts/handlers.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>
 
 

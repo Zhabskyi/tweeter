@@ -13,9 +13,7 @@
   &:hover .tweet__footer_icons {
     font-size: 0.9em;
   }
-  & article {
 
-  }
   &__header {
     display: flex;
     justify-content: space-between;
@@ -41,6 +39,7 @@
     }
   }
   &__text {
+    word-wrap: break-word;
     width: 100%;
     padding: 1.5em;
     background-color: inherit;

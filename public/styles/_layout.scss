@@ -22,10 +22,23 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include lg {
+    flex-direction: row;
+    margin: 80px 0 0 40px;
+  }
+}
+
 .container {
-  padding-top: 540px;
+  @include lg {
+    width: 60%;
+    padding-top: 48px;
+  }
+  padding-top: 80px;
   width: 90%;
-  margin: 0 auto;
+  margin: 2em auto;
   background-color: inherit;
 }
 
